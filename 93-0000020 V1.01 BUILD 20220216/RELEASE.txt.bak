@@ -1,0 +1,31 @@
+Release Notes
+--------------
+V1.01 BUILD 20220216
+FIXED bug where script would report no errors even if there were errors
+FIXED issue where not having the ENG-00000480 cable caused a crash with no error message
+
+Known Issues
+------------
+TODO use sg.print()/sg.cprint() method to write to multiline for cleaner code
+TODO Add capability to clear filebrowser history.
+FIXME on Read, reduce # of Registers to legal value instead of crashing
+TEST exit cleanly on window close
+TODO save window size and position
+TODO separate Read and Write input text fields
+FIXME Long wait if serial adapter can't find a server.
+TODO catch errors to window and eliminate console window
+
+V1.0 BUILD 20220210
+Runs scripts
+Added ASSERT capability to script
+Added a logging window
+
+Technical Notes
+----------------
+To modify, open 93-0000020.py using PyCharm as a project.
+
+License
+--------
+Portions of this software are licensed under the Apache License, Version 2.0.
+All other portions of this software are (C) 2022 Solar Stik, Inc. All rights reserved.
+

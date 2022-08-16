@@ -1,0 +1,50 @@
+Release Notes
+--------------
+V1.3.0 - not released
+TEST: Version 8704 == 2.2.0? Yes!
+FIXME: Datalogging broken--no data
+FIXME pyinstaller fails trying to use matplotlib (or whatever it's called).
+Added CAN bus monitoring of pid_input, pid_output and pid_set_point. Works, but it's not clean.
+Added ability to read LOG_STATUS
+Adopts semantic versioning
+Partially updated to 99-0000011 V1.2.2 API
+Changes baud to 57600.
+Improved exception handling
+Added support for new registers in Control Board Firmware 1.2.2
+TODO on Read, reduce # of Registers to legal value instead returning None
+TODO Added deciphering of node address
+TODO pyinstaller unable to find can package. Workaround using make_exe.bat.
+TODO stop PID logger on CAN window exit.
+
+V1.2
+Adds datalogging to file.
+Adds additional decoding of CAN messages
+FIXED Long wait if serial adapter can't find a server.
+
+V1.01 BUILD 20220216
+FIXED bug where script would report no errors even if there were errors
+FIXED issue where not having the ENG-00000480 cable caused a crash with no error message
+
+Known Issues
+------------
+TODO use sg.print()/sg.cprint() method to write to multiline for cleaner code
+TODO Add capability to clear filebrowser history.
+TEST exit cleanly on window close
+TODO save window size and position
+TODO separate Read and Write input text fields
+TODO catch errors to window and eliminate console window
+TODO crashes app on USB disconnection
+TODO read the log in a task separate from the GUI read loop so we can separate the read interval from the reporting interval.
+TODO rename Save As to something like "Log file name"
+TODO Add support for other RS485 adapters
+
+V1.0 BUILD 20220210
+Runs scripts
+Added ASSERT capability to script
+Added a logging window
+
+License
+--------
+Portions of this software are licensed under the Apache License, Version 2.0.
+93-0000020.py is (C) 2022 Solar Stik, Inc. All rights reserved.
+
