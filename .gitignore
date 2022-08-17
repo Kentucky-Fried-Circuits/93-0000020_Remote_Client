@@ -32,7 +32,8 @@ inc/
 /Makefile.old
 /MANIFEST.bak
 /pm_to_blib
-/*.zip
 make_exe.bat.bak
 *.wbk
 *.bak
+~$*.docx
+*.TMP
