@@ -1,20 +1,18 @@
 Release Notes
 --------------
-V1.3.0 - not released
-TEST: Version 8704 == 2.2.0? Yes!
-FIXME: Datalogging broken--no data
-FIXME pyinstaller fails trying to use matplotlib (or whatever it's called).
-Added CAN bus monitoring of pid_input, pid_output and pid_set_point. Works, but it's not clean.
-Added ability to read LOG_STATUS
+V1.3.0
+Added support for new registers in Control Board Firmware 1.2.2 and RM/AGS version 2.2.0
+Added then disabled CAN bus monitoring of pid_input, pid_output and pid_set_point. Works, but it's not clean.
 Adopts semantic versioning
 Partially updated to 99-0000011 V1.2.2 API
 Changes baud to 57600.
 Improved exception handling
-Added support for new registers in Control Board Firmware 1.2.2
+Moved to Semantic Versioning per Technology Handbook.
+TODO move logging to a thread
 TODO on Read, reduce # of Registers to legal value instead returning None
 TODO Added deciphering of node address
-TODO pyinstaller unable to find can package. Workaround using make_exe.bat.
 TODO stop PID logger on CAN window exit.
+FIXME pyinstaller fails trying to use Matplotlib and can.interfaces.pcan.basic. CAN feature commented out.
 
 V1.2
 Adds datalogging to file.

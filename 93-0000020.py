@@ -5,7 +5,7 @@ __author__ = "Brian Alano"
 __license__ = "(C) 2020-2022 Solar Stik, Inc. All rights reserved."
 __status__ = "Development"
 __url__ = "https://www.solarstik.com"
-__version__ = "V1.3.0-20220809"
+__version__ = "V1.3.0"
 
 #####################################################################################
 # Configuration parameters
@@ -34,7 +34,9 @@ import math
 import serial.tools.list_ports  # from pyserial
 import csv
 import logging
-import can.interfaces.pcan.pcan
+#import can.interfaces.pcan.basic
+#import can.interfaces.pcan.pcan
+
 import j1939 # package can-j1939
 
 # name descriptor for this CAN Controller Application. Arbitrary (therefore non-conformal) because we aren't subscribers.
@@ -54,7 +56,7 @@ logging.getLogger('j1939').setLevel(logging.DEBUG)
 logging.getLogger('can').setLevel(logging.DEBUG)
 
 # create the ControllerApplications
-ca = j1939.ControllerApplication(name, 128)
+#ca = j1939.ControllerApplication(name, 128)
 
 # must match register list in RMAGS.h
 regs = {
@@ -786,8 +788,8 @@ def main():
         reg_vals[key] = None
 
     # Set up GUI
-#    reg_names = sorted([reg for reg in regs if not reg.startswith("LOG")] + ["LOG_STATUS"])
-    reg_names = sorted([reg for reg in regs])
+    reg_names = sorted([reg for reg in regs if not reg.startswith("LOG")] + ["LOG_STATUS"])
+    # reg_names = sorted([reg for reg in regs])
     value_text = ['# of Registers', 'Value']
     # print(reg_names.sort())
     top = [
@@ -882,10 +884,11 @@ def main():
             instrument = connect_port()
             connected = (instrument != None)
         elif event == '-CAN-':
-            if (can_connect()):
-                ani = FuncAnimation(plt.gcf(), animate, 10)
-                plt.tight_layout()
-                plt.show()
+            sg.popup("CAN feature disabled")
+            # if (can_connect()):
+            #     ani = FuncAnimation(plt.gcf(), animate, 10)
+            #     plt.tight_layout()
+            #     plt.show()
         elif event == sg.WINDOW_CLOSED or event == 'Quit':
             break
 
@@ -896,11 +899,11 @@ def main():
         window['-RUN-'].update(disabled=(not(is_run_ok(values)) or not(connected)))
 
     #cleanup thread(s)
-    if log_thread.is_alive():
-        log_thread.join()
+    # if log_thread.is_alive():
+    #     log_thread.join()
     # Finish up by removing from the screen
-    if f is not None:
-        f.close()
+    if log_handle is not None:
+        log_handle.close()
     window.close()
     print("Main    : wait for the thread to finish")
     # x.join()
