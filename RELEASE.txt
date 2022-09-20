@@ -1,6 +1,9 @@
+93-0000020 HyPR 6000 Client
 Release Notes
 --------------
 V1.3.0
+BUILD 220809
+FIXME null characters at beginning of datalog
 Added support for new registers in Control Board Firmware 1.2.2 and RM/AGS version 2.2.0
 Added then disabled CAN bus monitoring of pid_input, pid_output and pid_set_point. Works, but it's not clean.
 Adopts semantic versioning
