@@ -1,6 +1,17 @@
-93-0000020 HyPR 6000 Client
+93-0000020 Remote Client
+
 Release Notes
 --------------
+V1.4.0
+Renamed from "HyPR 6000 Client" to "Remote Client"
+Added selection for products: 20-0104124 24VDC HyPR 6000 and 20-0104033 24VDC Pro-Verter 5000-220 AFF1
+Added support for remote monitoring and remote control of 20-0104033
+Moved to GitHub for official repository
+
+KNOWN ISSUES
+Pressing "Run Script" when not connected crashed the program.
+Unable to build CAN bus support into exe using pyinstaller.
+
 V1.3.0
 BUILD 220809
 FIXME null characters at beginning of datalog
