@@ -2,6 +2,10 @@
 
 Release Notes
 --------------
+V1.4.1
+Added selection for products: 24VDC PRO-Verter 5000-120 AR-4034 (20-0104034)
+See V1.4.0 for KNOWN ISSUES which all persist in this version.
+
 V1.4.0
 Renamed from "HyPR 6000 Client" to "Remote Client"
 Added selection for products: 20-0104124 24VDC HyPR 6000 and 20-0104033 24VDC Pro-Verter 5000-220 AFF1
