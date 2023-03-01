@@ -2,7 +2,7 @@
 
 Release Notes
 --------------
-V1.4.1
+V1.5.0
 Added selection for products: 24VDC PRO-Verter 5000-120 AR-4034 (20-0104034)
 See V1.4.0 for KNOWN ISSUES which all persist in this version.
 
