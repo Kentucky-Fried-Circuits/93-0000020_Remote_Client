@@ -1,5 +1,5 @@
-# 93-0000020_HyPR_6000_Client
+# 93-0000020_Remote_Client
 
-Reference implementation Modbus client.
+Solar Stik Client for Programming and Troublehsooting. See RELEASE.TXT for supported products.
 
 Expect bugs. See RELEASE.txt. Open Issues for the bugs that bug you.
