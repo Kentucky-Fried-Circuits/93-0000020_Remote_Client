@@ -2,6 +2,30 @@
 
 Release Notes
 --------------
+V1.6.0
+
+Minor changes
+-------------
+Some incomplete changes for Magnethereal.
+
+Bugfixes
+--------
+Fixed: Select PRO-Verter 5000-AFF1. Command Entry changes to Absorb exit amps. Pres "Run". Program crashes with unhandled exception "'NoneType' has no attribut 'write'.
+
+Known Issues
+------------
+FIXME Attempting to "Run Script" on a file that doesn't exist generates an unhandled exception
+TODO use sg.print()/sg.cprint() method to write to multiline for cleaner code
+TODO Add capability to clear filebrowser history.
+TEST exit cleanly on window close
+TODO save window size and position
+TODO separate Read and Write input text fields
+TODO catch errors to window and eliminate console window
+TODO crashes app on USB disconnection
+TODO read the log in a task separate from the GUI read loop so we can separate the read interval from the reporting interval.
+TODO rename Save As to something like "Log file name"
+TODO Add support for other RS485 adapters. Currently assumes a Silicone Labs CP210x-compatible USB to serial chip.
+
 V1.5.0
 Added selection for products: 24VDC PRO-Verter 5000-120 AR-4034 (20-0104034)
 See V1.4.0 for KNOWN ISSUES which all persist in this version.
@@ -41,18 +65,6 @@ V1.01 BUILD 20220216
 FIXED bug where script would report no errors even if there were errors
 FIXED issue where not having the ENG-00000480 cable caused a crash with no error message
 
-Known Issues
-------------
-TODO use sg.print()/sg.cprint() method to write to multiline for cleaner code
-TODO Add capability to clear filebrowser history.
-TEST exit cleanly on window close
-TODO save window size and position
-TODO separate Read and Write input text fields
-TODO catch errors to window and eliminate console window
-TODO crashes app on USB disconnection
-TODO read the log in a task separate from the GUI read loop so we can separate the read interval from the reporting interval.
-TODO rename Save As to something like "Log file name"
-TODO Add support for other RS485 adapters
 
 V1.0 BUILD 20220210
 Runs scripts

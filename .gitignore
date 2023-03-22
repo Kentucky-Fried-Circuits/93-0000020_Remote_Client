@@ -33,9 +33,12 @@ inc/
 /MANIFEST.bak
 /pm_to_blib
 make_exe.bat.bak
+
 *.wbk
 *.bak
 ~$*.docx
 *.TMP
 __pycache__/93-0000020.cpython-38.pyc
 93-0000020 V1.4.0.zip
+prior releases/
+venv/Lib/site-packages/__pycache__/

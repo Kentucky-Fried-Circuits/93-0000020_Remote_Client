@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # reference implementation for the Solar Stik Modbustik protocol.
 # see RELEASE.txt for release notes and known issues
-__author__ = "Brian Alano"
-__license__ = "(C) 2020-2022 Solar Stik, Inc. All rights reserved."
+__author__ = "Brian Alano, Boris Barreto"
+__license__ = "(C) 2020-2023 Solar Stik, Inc. All rights reserved."
 __status__ = "Development"
 __url__ = "https://www.solarstik.com"
-__version__ = "V1.4.1"
+__version__ = "V1.6.0"
 
 #####################################################################################
 # Configuration parameters

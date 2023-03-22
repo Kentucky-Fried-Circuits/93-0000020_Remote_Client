@@ -1,0 +1,13 @@
+# Programming file for 20-0104033 24VDC PRO-Verter 5000-220 AFF1, SO2217501, DARI
+# starting address, number of registers to read OR value to write, True to write/False to read, delay after, # of iterations, note or assertion
+#Bulk current,70,True,0.05,1,ASSERT:x=='OK'
+Bulk current,1,False,0.05,1,ASSERT:x==70
+#Absorb voltage,2900,True,0.05,1,ASSERT:x=='OK'
+Absorb voltage,1,False,0.05,1,ASSERT:x==2900
+#Equalization voltage,2900,True,0.05,1,ASSERT:x=='OK'
+#Floating voltage,2900,True,0.05,1,ASSERT:x=='OK'
+# Grid input max current and Gen input maximum current can't be read or written. BA suspects EVO firmware bug. They'll have to be done manually for now.
+G#rid input max current,1000,True,0.05,1,ASSERT:x=='OK'
+Grid input max current,1,False,0.05,1,ASSERT:x==1000
+#Gen input maximum current,1300,True,0.05,1,ASSERT:x=='OK'
+Gen input maximum current,1,False,0.05,1,ASSERT:x==1300
