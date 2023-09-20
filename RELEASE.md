@@ -1,19 +1,22 @@
-93-0000020 Remote Client
-
+93-0000020 Remote Client 
+--------------
 Release Notes
 --------------
-V1.6.0
+## V1.7.0
+### Minor changes
+TEST Added support for ATSC cabinet
 
-Minor changes
--------------
+### Bugfixes
+TEST doesn't crash if the device is not connected
+
+## V1.6.0
+### Minor changes
 Some incomplete changes for Magnethereal.
 
-Bugfixes
---------
+### Bugfixes
 Fixed: Select PRO-Verter 5000-AFF1. Command Entry changes to Absorb exit amps. Pres "Run". Program crashes with unhandled exception "'NoneType' has no attribut 'write'.
 
-Known Issues
-------------
+### Known Issues
 FIXME Attempting to "Run Script" on a file that doesn't exist generates an unhandled exception
 TODO use sg.print()/sg.cprint() method to write to multiline for cleaner code
 TODO Add capability to clear filebrowser history.
@@ -26,21 +29,21 @@ TODO read the log in a task separate from the GUI read loop so we can separate t
 TODO rename Save As to something like "Log file name"
 TODO Add support for other RS485 adapters. Currently assumes a Silicone Labs CP210x-compatible USB to serial chip.
 
-V1.5.0
+## V1.5.0
 Added selection for products: 24VDC PRO-Verter 5000-120 AR-4034 (20-0104034)
 See V1.4.0 for KNOWN ISSUES which all persist in this version.
 
-V1.4.0
+## V1.4.0
 Renamed from "HyPR 6000 Client" to "Remote Client"
 Added selection for products: 20-0104124 24VDC HyPR 6000 and 20-0104033 24VDC Pro-Verter 5000-220 AFF1
 Added support for remote monitoring and remote control of 20-0104033
 Moved to GitHub for official repository
 
-KNOWN ISSUES
+### KNOWN ISSUES
 Pressing "Run Script" when not connected crashed the program.
 Unable to build CAN bus support into exe using pyinstaller.
 
-V1.3.0
+## V1.3.0
 BUILD 220809
 FIXME null characters at beginning of datalog
 Added support for new registers in Control Board Firmware 1.2.2 and RM/AGS version 2.2.0
@@ -56,12 +59,12 @@ TODO Added deciphering of node address
 TODO stop PID logger on CAN window exit.
 FIXME pyinstaller fails trying to use Matplotlib and can.interfaces.pcan.basic. CAN feature commented out.
 
-V1.2
+## V1.2
 Adds datalogging to file.
 Adds additional decoding of CAN messages
 FIXED Long wait if serial adapter can't find a server.
 
-V1.01 BUILD 20220216
+## V1.01 BUILD 20220216
 FIXED bug where script would report no errors even if there were errors
 FIXED issue where not having the ENG-00000480 cable caused a crash with no error message
 

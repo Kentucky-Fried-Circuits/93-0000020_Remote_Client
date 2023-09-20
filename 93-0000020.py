@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # reference implementation for the Solar Stik Modbustik protocol.
-# see RELEASE.txt for release notes and known issues
+# see RELEASE.md for release notes and known issues
 __author__ = "Brian Alano, Boris Barreto"
 __license__ = "(C) 2020-2023 Solar Stik, Inc. All rights reserved."
 __status__ = "Development"
 __url__ = "https://www.solarstik.com"
-__version__ = "V1.6.0"
+__version__ = "V1.7.0"
 
 #####################################################################################
 # Configuration parameters
@@ -333,6 +333,202 @@ products = [
         },
         0x06,
     ),
+    (
+        '24VDC Inverter/Charger Assembly #1 (20-0104060)',
+        9600,
+        0x1,
+        {  # must match register list in the EVO series - MODBUS communications protocol document
+            'Absorb time': 0x2E,
+            'Absorb exit amps': 0x2F,
+            'Bulk current': 0x30,
+            'Absorb voltage': 0x31,
+            'Equalization voltage': 0x32,
+            'Floating voltage': 0x33,
+            'Temperature compensation': 0x34,
+            'Battery low voltage': 0x35,
+            'Battery over voltage': 0x36,
+            'Low voltage alarm': 0x37,
+            'Reset voltage': 0x38,
+            'Low voltage detect time': 0x39,
+            'Low voltage cut off time': 0x3A,
+            'Charge mode (equalization)': 0x3B,
+            'Mode (Online mode)': 0x3C,
+            'Online option': 0x3D,
+            'Reset to Bulk stage': 0x3E,
+            'Charging profile': 0x3F,
+            'Default frequency': 0x40,
+            'Grid input max current': 0x41,
+            'Low frequency cut off': 0x42,
+            'Low frequency reset': 0x43,
+            'High frequency cut off': 0x44,
+            'High frequency reset': 0x45,
+            'Low voltage reset': 0x46,
+            'Low voltage cut off 1': 0x47,
+            'Low voltage cut off 2': 0x48,
+            'Low voltage cut off 3': 0x49,
+            'Low voltage detect time 1': 0x4A,
+            'Low voltage detect time 2': 0x4B,
+            'Low voltage detect time 3': 0x4C,
+            'High voltage reset': 0x4D,
+            'High voltage cut off 1': 0x4E,
+            'High voltage cut off 2': 0x4F,
+            'High voltage cut off 3': 0x50,
+            'High voltage detect time 1': 0x51,
+            'High voltage detect time 2': 0x52,
+            'High voltage detect time 3': 0x53,
+            'Gen input maximum current': 0x54,
+            'GS detect time': 0x55,
+            'GEN ON time': 0x56,
+            'GEN OFF delay': 0x57,
+            'Battery type': 0x58,
+            'Input OC Protection': 0x59,
+            'Input Recovery': 0x5A,
+            'Sync. Grid': 0x5B,
+            'Sync. GEN': 0x5C,
+            'Safe Charging': 0x5D,
+            'External Charger': 0x5F,
+            'Power saving': 0x60,
+            'Enter point': 0x61,
+            'Wake up point': 0x62,
+            'Remote switch': 0x63,
+            'Relay function': 0x64,
+            'Comm. ID': 0x65,
+            'Buzzer': 0x66,
+            'Discharge beep': 0x67,
+            'Default reset': 0x68,
+            'Data log time': 0x69,
+            'Temperature unit': 0x6B,
+            'Password disable': 0x6C,
+            'Remote switch delay time': 0x6D,
+            'Status of GEN input': 0x100,
+            'Frequency of GEN input': 0x101,
+            'Voltage of GEN input': 0x102,
+            'Status of Grid input': 0x103,
+            'Frequency of Grid input': 0x104,
+            'Voltage of Grid input': 0x105,
+            'Input current': 0x106,
+            'Input VA': 0x108,
+            'Input watt': 0x10A,
+            'Output frequency': 0x10C,
+            'Output voltage': 0x10D,
+            'Invert/Charge current': 0x10E,
+            'Invert/Charge VA': 0x110,
+            'Invert/Charge watt': 0x112,
+            'Battery voltage': 0x114,
+            'Battery current': 0x115,
+            'External current': 0x116,
+            'Battery temperature': 0x117,
+            'Transformer temperature': 0x118,
+            'Bus bar temperature': 0x119,
+            'Heat sink temperature': 0x11A,
+            'Fan speed': 0x11B,
+            'Operating mode': 0x11C,
+            'Error code': 0x11D,
+            'Charge stage': 0x11E,
+            'Version': 0x11F,
+            'Compensating voltage': 0x120,
+            'Control': 0x200,
+        },
+        0x06,
+    ),
+    (
+        '24VDC Inverter/Charger Assembly #2 (20-0104060)',
+        9600,
+        0x2,
+        {  # must match register list in the EVO series - MODBUS communications protocol document
+            'Absorb time': 0x2E,
+            'Absorb exit amps': 0x2F,
+            'Bulk current': 0x30,
+            'Absorb voltage': 0x31,
+            'Equalization voltage': 0x32,
+            'Floating voltage': 0x33,
+            'Temperature compensation': 0x34,
+            'Battery low voltage': 0x35,
+            'Battery over voltage': 0x36,
+            'Low voltage alarm': 0x37,
+            'Reset voltage': 0x38,
+            'Low voltage detect time': 0x39,
+            'Low voltage cut off time': 0x3A,
+            'Charge mode (equalization)': 0x3B,
+            'Mode (Online mode)': 0x3C,
+            'Online option': 0x3D,
+            'Reset to Bulk stage': 0x3E,
+            'Charging profile': 0x3F,
+            'Default frequency': 0x40,
+            'Grid input max current': 0x41,
+            'Low frequency cut off': 0x42,
+            'Low frequency reset': 0x43,
+            'High frequency cut off': 0x44,
+            'High frequency reset': 0x45,
+            'Low voltage reset': 0x46,
+            'Low voltage cut off 1': 0x47,
+            'Low voltage cut off 2': 0x48,
+            'Low voltage cut off 3': 0x49,
+            'Low voltage detect time 1': 0x4A,
+            'Low voltage detect time 2': 0x4B,
+            'Low voltage detect time 3': 0x4C,
+            'High voltage reset': 0x4D,
+            'High voltage cut off 1': 0x4E,
+            'High voltage cut off 2': 0x4F,
+            'High voltage cut off 3': 0x50,
+            'High voltage detect time 1': 0x51,
+            'High voltage detect time 2': 0x52,
+            'High voltage detect time 3': 0x53,
+            'Gen input maximum current': 0x54,
+            'GS detect time': 0x55,
+            'GEN ON time': 0x56,
+            'GEN OFF delay': 0x57,
+            'Battery type': 0x58,
+            'Input OC Protection': 0x59,
+            'Input Recovery': 0x5A,
+            'Sync. Grid': 0x5B,
+            'Sync. GEN': 0x5C,
+            'Safe Charging': 0x5D,
+            'External Charger': 0x5F,
+            'Power saving': 0x60,
+            'Enter point': 0x61,
+            'Wake up point': 0x62,
+            'Remote switch': 0x63,
+            'Relay function': 0x64,
+            'Comm. ID': 0x65,
+            'Buzzer': 0x66,
+            'Discharge beep': 0x67,
+            'Default reset': 0x68,
+            'Data log time': 0x69,
+            'Temperature unit': 0x6B,
+            'Password disable': 0x6C,
+            'Remote switch delay time': 0x6D,
+            'Status of GEN input': 0x100,
+            'Frequency of GEN input': 0x101,
+            'Voltage of GEN input': 0x102,
+            'Status of Grid input': 0x103,
+            'Frequency of Grid input': 0x104,
+            'Voltage of Grid input': 0x105,
+            'Input current': 0x106,
+            'Input VA': 0x108,
+            'Input watt': 0x10A,
+            'Output frequency': 0x10C,
+            'Output voltage': 0x10D,
+            'Invert/Charge current': 0x10E,
+            'Invert/Charge VA': 0x110,
+            'Invert/Charge watt': 0x112,
+            'Battery voltage': 0x114,
+            'Battery current': 0x115,
+            'External current': 0x116,
+            'Battery temperature': 0x117,
+            'Transformer temperature': 0x118,
+            'Bus bar temperature': 0x119,
+            'Heat sink temperature': 0x11A,
+            'Fan speed': 0x11B,
+            'Operating mode': 0x11C,
+            'Error code': 0x11D,
+            'Charge stage': 0x11E,
+            'Version': 0x11F,
+            'Compensating voltage': 0x120,
+            'Control': 0x200,
+        },
+        0x06,
+    ),
 ]
 
 # some globals that should be replaced with better coding practices
@@ -535,6 +731,9 @@ def do_script_line(line, preserve):
             else:  # read_register
                 try:
                     result = (read_register(addr, 0))
+                except minimalmodbus.NoResponseError as e:
+                    sg.popup_timed("NoResponseError. Probably not connected to the device.")
+                    result = "(Null)"
                 except minimalmodbus.IllegalRequestError as e:
                     sg.popup_timed("IllegalRequestError. Probably the register does not exist on the host.")
                     result = "(Null)"
@@ -865,6 +1064,8 @@ def read_register(
 ):
     """Read a register from the Modbus server"""
     global comm_status
+    if not hasattr(instrument, "read_register"):
+        raise minimalmodbus.NoResponseError
     try:
         return instrument.read_register(registeraddress, number_of_decimals)  # Registernumber, number of decimals
     except minimalmodbus.IllegalRequestError as e:
@@ -1036,8 +1237,8 @@ def connect_port():
         try:
             comm_status = f'Connecting to {found_port} at {baud} baud and RS485 address {address}... '
             print(comm_status)
-
-            instrument = minimalmodbus.Instrument(found_port, address, baudrate=baud, debug=False,
+# debug = False
+            instrument = minimalmodbus.Instrument(found_port, address, baudrate=baud, debug=True,
                                                   timeout=1, close_port_after_each_call=False)  # port name, slave address (in decimal)
             instrument.debug = True  #FIXME DEBUG
             instrument.serial.baudrate = baud  # it can't seem to set the baud rate after the first instatiation
